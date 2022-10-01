@@ -1,5 +1,9 @@
 # Building the docker images
-- docker-compose -f docker-compose-build.yaml build --parallel
+#- docker-compose -f docker-compose-build.yaml build --parallel
+- docker build -t udagram-api-feed ./udagram-api-feed
+- docker build -t udagram-api-user ./udagram-api-user
+- docker build -t udagram-frontend ./udagram-frontend
+- docker build -t reverseproxy ./reverseproxy
 
 # Tagging the docker images
 - docker tag udagram-api-feed udeani/udagram-api-feed:v1
